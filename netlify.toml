@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[[redirects]]
+  # Proxy API requests to the backend server to avoid CORS issues
+  from = "/api/*"
+  to = "http://aldewelgroup-001-site1.mtempurl.com/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
