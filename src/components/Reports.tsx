@@ -54,10 +54,10 @@ const departmentData = [
 ];
 
 const performanceData = [
-  { quarter: "Q1", average: 3.8, excellent: 25, good: 45, average: 20, poor: 10 },
-  { quarter: "Q2", average: 4.0, excellent: 30, good: 42, average: 18, poor: 10 },
-  { quarter: "Q3", average: 4.1, excellent: 32, good: 45, average: 15, poor: 8 },
-  { quarter: "Q4", average: 4.2, excellent: 35, good: 43, average: 15, poor: 7 },
+  { quarter: "Q1", score: 3.8, excellent: 25, good: 45, average: 20, poor: 10 },
+  { quarter: "Q2", score: 4.0, excellent: 30, good: 42, average: 18, poor: 10 },
+  { quarter: "Q3", score: 4.1, excellent: 32, good: 45, average: 15, poor: 8 },
+  { quarter: "Q4", score: 4.2, excellent: 35, good: 43, average: 15, poor: 7 },
 ];
 
 export function Reports() {
@@ -77,7 +77,7 @@ export function Reports() {
             Comprehensive insights and data analysis
           </p>
         </div>
-        
+
         <div className="flex flex-wrap gap-2">
           <Popover>
             <PopoverTrigger asChild>

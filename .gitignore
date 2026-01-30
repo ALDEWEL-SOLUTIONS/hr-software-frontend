@@ -9,3 +9,4 @@ build/
 .idea/
 gh-pages/
 login_response_debug.txt
+login_response_debug.json
