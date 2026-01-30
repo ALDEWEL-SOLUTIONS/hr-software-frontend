@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SidebarProvider, Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarHeader, SidebarFooter } from "./components/ui/sidebar";
+import { SidebarProvider, Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarHeader, SidebarFooter, SidebarTrigger } from "./components/ui/sidebar";
 import { LayoutDashboard, Users, Calendar, Clock, DollarSign, Briefcase, Award, FileText, Settings, LogOut } from "lucide-react";
 import { Dashboard } from "./components/Dashboard";
 import { EmployeeList } from "./components/EmployeeList";
@@ -18,6 +18,7 @@ import { toast } from "sonner";
 import { Toaster } from "./components/ui/sonner";
 import { authService } from "./services/auth";
 import { useEffect } from "react";
+import logo from "./assets/logo.png";
 
 const menuItems = [
   { icon: LayoutDashboard, label: "Dashboard", id: "dashboard" },
@@ -153,14 +154,10 @@ export default function App() {
     <SidebarProvider>
       <div className="flex min-h-screen w-full">
         <Sidebar>
-          <SidebarHeader className="p-4">
-            <div className="flex items-center gap-2">
-              <div className="bg-gradient-to-br from-primary to-accent p-2 rounded-lg">
-                <Users className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-lg font-bold">HR System</h1>
-                <p className="text-xs text-muted-foreground">Human Resources</p>
+          <SidebarHeader className="p-4 border-b">
+            <div className="flex items-center gap-3">
+              <div className="p-1 rounded-lg">
+                <img src={logo} alt="Logo" className="h-10 w-auto" />
               </div>
             </div>
           </SidebarHeader>
@@ -236,8 +233,20 @@ export default function App() {
           </SidebarFooter>
         </Sidebar>
 
-        <main className="flex-1 bg-background">
-          {renderContent()}
+        <main className="flex-1 bg-background overflow-hidden flex flex-col">
+          <header className="h-16 border-b flex items-center px-4 md:hidden shrink-0 bg-white sticky top-0 z-20">
+            <SidebarTrigger className="h-10 w-10 text-primary" />
+            <div className="ml-3">
+              <img src={logo} alt="Logo" className="h-8 w-auto" />
+            </div>
+          </header>
+          <div className="hidden md:flex items-center p-4 border-b shrink-0 bg-white sticky top-0 z-20">
+            <SidebarTrigger className="text-primary" />
+            <span className="ml-4 text-sm font-medium text-muted-foreground uppercase tracking-wider">{activeView}</span>
+          </div>
+          <div className="flex-1 overflow-auto">
+            {renderContent()}
+          </div>
         </main>
       </div>
       <Toaster />

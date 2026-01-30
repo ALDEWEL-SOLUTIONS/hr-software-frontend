@@ -3,10 +3,10 @@ import { Users, Calendar, DollarSign, TrendingUp, Clock, UserCheck, UserX, Brief
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
 const statsData = [
-  { title: "Total Employees", value: "247", change: "+12 this month", icon: Users, color: "text-blue-600", bgColor: "bg-blue-50" },
-  { title: "Present Today", value: "232", change: "94% attendance", icon: UserCheck, color: "text-green-600", bgColor: "bg-green-50" },
-  { title: "On Leave", value: "12", change: "3 pending requests", icon: Calendar, color: "text-orange-600", bgColor: "bg-orange-50" },
-  { title: "Monthly Payroll", value: "$487K", change: "+8% from last month", icon: DollarSign, color: "text-purple-600", bgColor: "bg-purple-50" },
+  { title: "Total Employees", value: "247", change: "+12 this month", icon: Users, color: "text-[#1E2A78]", bgColor: "bg-[#1E2A78]/10" },
+  { title: "Present Today", value: "232", change: "94% attendance", icon: UserCheck, color: "text-[#3AB0E2]", bgColor: "bg-[#3AB0E2]/10" },
+  { title: "On Leave", value: "12", change: "3 pending requests", icon: Calendar, color: "text-[#1E2A78]", bgColor: "bg-[#1E2A78]/10" },
+  { title: "Monthly Payroll", value: "$487K", change: "+8% from last month", icon: DollarSign, color: "text-[#3AB0E2]", bgColor: "bg-[#3AB0E2]/10" },
 ];
 
 const attendanceData = [
@@ -19,11 +19,11 @@ const attendanceData = [
 ];
 
 const departmentData = [
-  { name: "Engineering", value: 85, color: "#3b82f6" },
-  { name: "Sales", value: 52, color: "#10b981" },
-  { name: "Marketing", value: 38, color: "#f59e0b" },
-  { name: "HR", value: 24, color: "#8b5cf6" },
-  { name: "Operations", value: 48, color: "#ec4899" },
+  { name: "Engineering", value: 85, color: "#1E2A78" },
+  { name: "Sales", value: 52, color: "#3AB0E2" },
+  { name: "Marketing", value: 38, color: "#64748B" },
+  { name: "HR", value: 24, color: "#94A3B8" },
+  { name: "Operations", value: 48, color: "#CBD5E1" },
 ];
 
 const recentActivities = [
@@ -85,8 +85,8 @@ export function Dashboard() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="present" stroke="#10b981" strokeWidth={2} name="Present %" />
-                <Line type="monotone" dataKey="absent" stroke="#ef4444" strokeWidth={2} name="Absent %" />
+                <Line type="monotone" dataKey="present" stroke="#1E2A78" strokeWidth={2} name="Present %" />
+                <Line type="monotone" dataKey="absent" stroke="#3AB0E2" strokeWidth={2} name="Absent %" />
               </LineChart>
             </ResponsiveContainer>
           </CardContent>

@@ -5,6 +5,7 @@ import { Label } from "./ui/label";
 import { Button } from "./ui/button";
 import { Users, Eye, EyeOff } from "lucide-react";
 import { Alert, AlertDescription } from "./ui/alert";
+import logo from "../assets/logo.png";
 
 interface LoginProps {
   onLogin: (email: string, password: string) => void;
@@ -27,8 +28,8 @@ export function Login({ onLogin, onSwitchToRegister, error, isLoading }: LoginPr
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
       <div className="w-full max-w-md">
         <div className="flex justify-center mb-8">
-          <div className="bg-gradient-to-br from-primary to-accent p-4 rounded-2xl shadow-lg">
-            <Users className="h-12 w-12 text-white" />
+          <div className="p-2 rounded-2xl">
+            <img src={logo} alt="Logo" className="h-20 w-auto" />
           </div>
         </div>
 
@@ -36,7 +37,7 @@ export function Login({ onLogin, onSwitchToRegister, error, isLoading }: LoginPr
           <CardHeader className="space-y-1">
             <CardTitle className="text-2xl text-center">Welcome Back</CardTitle>
             <CardDescription className="text-center">
-              Sign in to your HR Management System account
+              Sign in to your account
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -121,7 +122,7 @@ export function Login({ onLogin, onSwitchToRegister, error, isLoading }: LoginPr
         </Card>
 
         <p className="text-center text-xs text-gray-500 mt-8">
-          © 2025 HR Management System. All rights reserved.
+          © 2025 All rights reserved.
         </p>
       </div>
     </div>

@@ -38,10 +38,10 @@ const payrollData = [
 ];
 
 const leaveData = [
-  { type: "Sick Leave", value: 245, color: "#E07A5F" },
-  { type: "Annual Leave", value: 420, color: "#88B04B" },
-  { type: "Personal Leave", value: 180, color: "#4A6572" },
-  { type: "Unpaid Leave", value: 95, color: "#8A8A8A" },
+  { type: "Sick Leave", value: 245, color: "#3AB0E2" },
+  { type: "Annual Leave", value: 420, color: "#1E2A78" },
+  { type: "Personal Leave", value: 180, color: "#64748B" },
+  { type: "Unpaid Leave", value: 95, color: "#94A3B8" },
 ];
 
 const departmentData = [
@@ -169,19 +169,19 @@ export function Reports() {
           </CardContent>
         </Card>
 
-        <Card className="border-l-4 border-l-[#F4A261]">
+        <Card className="border-l-4 border-l-secondary">
           <CardContent className="pt-6">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground">Total Payroll</p>
                 <p className="text-3xl mt-1">$642K</p>
               </div>
-              <div className="bg-[#F4A261]/10 p-3 rounded-full">
-                <DollarSign className="h-6 w-6 text-[#F4A261]" />
+              <div className="bg-secondary/10 p-3 rounded-full">
+                <DollarSign className="h-6 w-6 text-secondary" />
               </div>
             </div>
             <div className="flex items-center gap-2 mt-4">
-              <TrendingUp className="h-4 w-4 text-[#F4A261]" />
+              <TrendingUp className="h-4 w-4 text-secondary" />
               <span className="text-sm text-muted-foreground">+1.6% vs last month</span>
             </div>
           </CardContent>
@@ -217,9 +217,9 @@ export function Reports() {
                   <YAxis />
                   <Tooltip />
                   <Legend />
-                  <Line type="monotone" dataKey="total" stroke="#88B04B" strokeWidth={2} />
-                  <Line type="monotone" dataKey="active" stroke="#4A6572" strokeWidth={2} />
-                  <Line type="monotone" dataKey="onLeave" stroke="#E07A5F" strokeWidth={2} />
+                  <Line type="monotone" dataKey="total" stroke="#1E2A78" strokeWidth={2} />
+                  <Line type="monotone" dataKey="active" stroke="#3AB0E2" strokeWidth={2} />
+                  <Line type="monotone" dataKey="onLeave" stroke="#64748B" strokeWidth={2} />
                 </LineChart>
               </ResponsiveContainer>
             </CardContent>
@@ -273,9 +273,9 @@ export function Reports() {
                   <YAxis />
                   <Tooltip />
                   <Legend />
-                  <Bar dataKey="present" fill="#88B04B" />
-                  <Bar dataKey="late" fill="#E07A5F" />
-                  <Bar dataKey="absent" fill="#8A8A8A" />
+                  <Bar dataKey="present" fill="#1E2A78" />
+                  <Bar dataKey="late" fill="#3AB0E2" />
+                  <Bar dataKey="absent" fill="#94A3B8" />
                 </BarChart>
               </ResponsiveContainer>
             </CardContent>
@@ -334,9 +334,9 @@ export function Reports() {
                   <YAxis />
                   <Tooltip />
                   <Legend />
-                  <Bar dataKey="salaries" fill="#88B04B" stackId="a" />
-                  <Bar dataKey="benefits" fill="#4A6572" stackId="a" />
-                  <Bar dataKey="taxes" fill="#E07A5F" stackId="a" />
+                  <Bar dataKey="salaries" fill="#1E2A78" stackId="a" />
+                  <Bar dataKey="benefits" fill="#3AB0E2" stackId="a" />
+                  <Bar dataKey="taxes" fill="#64748B" stackId="a" />
                 </BarChart>
               </ResponsiveContainer>
             </CardContent>
@@ -511,10 +511,10 @@ export function Reports() {
                   <YAxis />
                   <Tooltip />
                   <Legend />
-                  <Bar dataKey="excellent" fill="#88B04B" />
-                  <Bar dataKey="good" fill="#4A6572" />
-                  <Bar dataKey="average" fill="#E07A5F" />
-                  <Bar dataKey="poor" fill="#8A8A8A" />
+                  <Bar dataKey="excellent" fill="#1E2A78" />
+                  <Bar dataKey="good" fill="#3AB0E2" />
+                  <Bar dataKey="average" fill="#64748B" />
+                  <Bar dataKey="poor" fill="#94A3B8" />
                 </BarChart>
               </ResponsiveContainer>
             </CardContent>
